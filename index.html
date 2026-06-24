@@ -10,337 +10,21 @@
 
 <title>BVRN® | Beyond Rules. Beyond Limits.</title>
 
+<link rel="stylesheet" href="style.css">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
-font-family:'Inter',sans-serif;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-body{
-
-background:#000;
-
-color:#fff;
-
-overflow-x:hidden;
-
-}
-
-/* NAVBAR */
-
-nav{
-
-position:fixed;
-
-top:0;
-
-width:100%;
-
-padding:25px 8%;
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-z-index:999;
-
-backdrop-filter:blur(10px);
-
-background:rgba(0,0,0,.3);
-
-}
-
-.logo{
-
-font-size:1.2rem;
-
-font-weight:900;
-
-letter-spacing:4px;
-
-}
-
-nav ul{
-
-display:flex;
-
-gap:30px;
-
-list-style:none;
-
-}
-
-nav a{
-
-color:white;
-
-text-decoration:none;
-
-font-size:.9rem;
-
-}
-
-/* HERO */
-
-.hero{
-
-height:100vh;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-padding:20px;
-
-background:
-
-linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-
-url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1600');
-
-background-size:cover;
-
-background-position:center;
-
-}
-
-.hero-content h1{
-
-font-size:8rem;
-
-font-weight:900;
-
-letter-spacing:15px;
-
-}
-
-.hero-content p{
-
-margin-top:20px;
-
-letter-spacing:5px;
-
-color:#d0d0d0;
-
-}
-
-.btn{
-
-display:inline-block;
-
-margin-top:40px;
-
-padding:14px 35px;
-
-border:1px solid white;
-
-color:white;
-
-text-decoration:none;
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-background:white;
-
-color:black;
-
-}
-
-/* ABOUT */
-
-.about{
-
-padding:120px 10%;
-
-text-align:center;
-
-}
-
-.about h2{
-
-font-size:3rem;
-
-margin-bottom:30px;
-
-}
-
-.about p{
-
-max-width:800px;
-
-margin:auto;
-
-line-height:2;
-
-color:#bdbdbd;
-
-}
-
-/* PRODUCTS */
-
-.products{
-
-padding:120px 10%;
-
-}
-
-.products h2{
-
-text-align:center;
-
-font-size:3rem;
-
-margin-bottom:60px;
-
-}
-
-.grid{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:30px;
-
-}
-
-.card{
-
-background:#111;
-
-overflow:hidden;
-
-border:1px solid #222;
-
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.card img{
-
-width:100%;
-
-height:400px;
-
-object-fit:cover;
-
-}
-
-.card-content{
-
-padding:20px;
-
-}
-
-.card-content h3{
-
-margin-bottom:10px;
-
-}
-
-/* QUOTE */
-
-.quote{
-
-padding:150px 10%;
-
-text-align:center;
-
-}
-
-.quote h2{
-
-font-size:5rem;
-
-line-height:1.2;
-
-}
-
-/* FOOTER */
-
-footer{
-
-padding:70px 20px;
-
-text-align:center;
-
-border-top:1px solid #222;
-
-}
-
-footer a{
-
-margin:0 15px;
-
-color:white;
-
-text-decoration:none;
-
-}
-
-@media(max-width:768px){
-
-.hero-content h1{
-
-font-size:4rem;
-
-letter-spacing:8px;
-
-}
-
-.quote h2{
-
-font-size:2.5rem;
-
-}
-
-nav ul{
-
-display:none;
-
-}
-
-}
-
-</style>
 
 </head>
 
 <body>
 
-<nav>
+<div id="loader">
+
+  <h1>BVRN®</h1>
+
+</div>
+
+<nav class="navbar">
 
 <div class="logo">
 
@@ -352,7 +36,7 @@ BVRN®
 
 <li><a href="#about">About</a></li>
 
-<li><a href="#products">Drop</a></li>
+<li><a href="#drop">Drop</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
@@ -362,13 +46,21 @@ BVRN®
 
 <section class="hero">
 
+<div class="hero-overlay"></div>
+
 <div class="hero-content">
 
 <h1>BVRN</h1>
 
-<p>BEYOND RULES. BEYOND LIMITS.</p>
+<p>
 
-<a href="#products" class="btn">
+BEYOND RULES.<br>
+
+BEYOND LIMITS.
+
+</p>
+
+<a href="#drop" class="btn">
 
 VIEW COLLECTION
 
@@ -378,67 +70,61 @@ VIEW COLLECTION
 
 </section>
 
-<section class="about" id="about">
+<section id="about" class="about">
 
 <h2>MANIFESTO</h2>
 
 <p>
 
-BVRN is a streetwear label built for those who move differently.
+More than clothing. Every piece is a statement.
 
-Inspired by modern street culture, creative freedom, and self-expression.
+Built for those who move differently.
 
-More than clothing, every piece is a statement.
+Inspired by modern street culture, freedom,
+
+and relentless self-expression.
+
+BVRN isn't just worn.
+
+It's lived.
 
 </p>
 
 </section>
 
-<section class="products" id="products">
+<section id="drop" class="drop">
 
 <h2>NEW DROP</h2>
 
-<div class="grid">
+<div class="products">
 
-<div class="card">
+<div class="product">
 
-<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=800">
-
-<div class="card-content">
+<img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1200">
 
 <h3>OVERSIZED TEE</h3>
 
-<p>Essential Streetwear Collection</p>
+<p>Essential Collection</p>
 
 </div>
 
-</div>
+<div class="product">
 
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=800">
-
-<div class="card-content">
+<img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=1200">
 
 <h3>HEAVY HOODIE</h3>
 
-<p>Built For Everyday Movement</p>
+<p>Street Essentials</p>
 
 </div>
 
-</div>
+<div class="product">
 
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=800">
-
-<div class="card-content">
+<img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=1200">
 
 <h3>CARGO PANTS</h3>
 
-<p>Urban Utility Series</p>
-
-</div>
+<p>Urban Utility</p>
 
 </div>
 
@@ -460,19 +146,57 @@ JUST BVRN.
 
 </section>
 
-<footer id="contact">
+<section class="lookbook">
 
-<h3>BVRN®</h3>
+<h2>LOOKBOOK</h2>
 
-<br>
+<div class="lookbook-grid">
 
-<a href="#">Instagram</a>
+<img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=1200">
 
-<a href="#">TikTok</a>
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=1200">
 
-<a href="#">WhatsApp</a>
+<img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=1200">
+
+</div>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>JOIN THE MOVEMENT</h2>
+
+<p>Follow BVRN and stay updated on future drops.</p>
+
+<div class="contact-buttons">
+
+<a href="https://wa.me/6289620944092" target="_blank">
+
+WHATSAPP
+
+</a>
+
+<a href="https://instagram.com/bvrn.authority" target="_blank">
+
+INSTAGRAM
+
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 BVRN®
+
+</p>
 
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 
