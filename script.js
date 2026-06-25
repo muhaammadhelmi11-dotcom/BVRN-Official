@@ -1,23 +1,15 @@
-function orderProduct(product, price){
+window.addEventListener("scroll", () => {
 
-const nomorWA = "6289620944092";
+const header = document.querySelector("header");
 
-const pesan =
+if(window.scrollY > 50){
 
-`Halo BVRN,
+header.style.background = "#000";
 
-Saya ingin memesan:
+}else{
 
-Produk : ${product}
-
-Harga : Rp ${price}
-
-Mohon info stoknya.`;
-
-const url =
-
-`https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
-
-window.open(url,'_blank');
+header.style.background = "rgba(0,0,0,.85)";
 
 }
+
+});
