@@ -1,59 +1,23 @@
-window.addEventListener("load", () => {
+function orderProduct(product, price){
 
-const loader = document.getElementById("loader");
+const nomorWA = "6289620944092";
 
-setTimeout(() => {
+const pesan =
 
-loader.style.opacity = "0";
+`Halo BVRN,
 
-loader.style.transition = "0.8s";
+Saya ingin memesan:
 
-setTimeout(() => {
+Produk : ${product}
 
-loader.style.display = "none";
+Harga : Rp ${price}
 
-}, 800);
+Mohon info stoknya.`;
 
-}, 1200);
+const url =
 
-});
+`https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
 
-// Fade In Animation
-
-const observer = new IntersectionObserver((entries)=>{
-
-entries.forEach((entry)=>{
-
-if(entry.isIntersecting){
-
-entry.target.style.opacity = "1";
-
-entry.target.style.transform = "translateY(0)";
+window.open(url,'_blank');
 
 }
-
-});
-
-},{
-
-threshold:0.1
-
-});
-
-const sections = document.querySelectorAll(
-
-".about, .drop, .quote, .lookbook, .contact"
-
-);
-
-sections.forEach((section)=>{
-
-section.style.opacity = "0";
-
-section.style.transform = "translateY(60px)";
-
-section.style.transition = "all 1s ease";
-
-observer.observe(section);
-
-});
