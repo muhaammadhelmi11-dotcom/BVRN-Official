@@ -6,7 +6,9 @@ padding:0;
 
 box-sizing:border-box;
 
-font-family:Arial,sans-serif;
+font-family:'Montserrat',sans-serif;
+
+scroll-behavior:smooth;
 
 }
 
@@ -20,116 +22,380 @@ color:white;
 
 header{
 
-text-align:center;
+position:fixed;
 
-padding:40px 20px;
+top:0;
+
+width:100%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 8%;
+
+background:rgba(0,0,0,.85);
+
+backdrop-filter:blur(10px);
+
+z-index:999;
 
 }
 
-header h1{
+.logo{
 
-font-size:4rem;
+font-size:30px;
+
+font-weight:800;
+
+letter-spacing:4px;
 
 color:silver;
 
-letter-spacing:5px;
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:25px;
+
+font-size:14px;
+
+transition:.3s;
 
 }
 
-header p{
+nav a:hover{
 
-color:#aaa;
-
-margin-top:10px;
+color:silver;
 
 }
 
 .hero{
 
+height:100vh;
+
+background:url('https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=1600')
+
+center center/cover;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
 text-align:center;
 
-padding:50px 20px;
+position:relative;
 
 }
 
-.hero h2{
+.overlay{
 
-font-size:2rem;
-
-margin-bottom:10px;
-
-}
-
-.products{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-
-gap:25px;
-
-padding:40px;
-
-}
-
-.card{
-
-background:#111;
-
-border:1px solid #333;
-
-border-radius:15px;
-
-overflow:hidden;
-
-}
-
-.card img{
+position:absolute;
 
 width:100%;
 
-height:350px;
+height:100%;
 
-object-fit:cover;
-
-}
-
-.card h3{
-
-padding:15px;
+background:rgba(0,0,0,.65);
 
 }
 
-.card span{
+.hero-content{
 
-display:block;
+position:relative;
 
-padding:0 15px;
-
-font-size:1.2rem;
-
-color:silver;
+z-index:2;
 
 }
 
-.card button{
+.hero h1{
 
-margin:15px;
+font-size:70px;
 
-width:calc(100% - 30px);
+font-weight:800;
 
-padding:12px;
+line-height:1.1;
 
-border:none;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+color:#ccc;
+
+margin-bottom:30px;
+
+}
+
+.btn{
+
+display:inline-block;
+
+padding:15px 35px;
 
 background:silver;
 
 color:black;
 
-font-weight:bold;
+text-decoration:none;
 
-cursor:pointer;
+font-weight:700;
 
-border-radius:10px;
+border-radius:50px;
+
+transition:.3s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+.about{
+
+padding:120px 10%;
+
+text-align:center;
+
+}
+
+.about h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+color:silver;
+
+}
+
+.about p{
+
+max-width:800px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#cfcfcf;
+
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:42px;
+
+margin-bottom:60px;
+
+color:silver;
+
+}
+
+#products{
+
+padding:100px 8%;
+
+}
+
+.product-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+gap:30px;
+
+}
+
+.product{
+
+background:#111;
+
+border:1px solid #222;
+
+border-radius:20px;
+
+overflow:hidden;
+
+transition:.4s;
+
+}
+
+.product:hover{
+
+transform:translateY(-10px);
+
+border-color:silver;
+
+}
+
+.product img{
+
+width:100%;
+
+height:420px;
+
+object-fit:cover;
+
+}
+
+.product h3{
+
+padding:20px 20px 10px;
+
+font-size:24px;
+
+}
+
+.product p{
+
+padding:0 20px;
+
+color:silver;
+
+font-weight:700;
+
+}
+
+.product a{
+
+display:block;
+
+margin:20px;
+
+padding:14px;
+
+background:silver;
+
+color:black;
+
+text-decoration:none;
+
+font-weight:700;
+
+text-align:center;
+
+border-radius:12px;
+
+}
+
+.instagram{
+
+padding:120px 10%;
+
+text-align:center;
+
+}
+
+.instagram h2{
+
+font-size:40px;
+
+margin-bottom:30px;
+
+color:silver;
+
+}
+
+.ig-btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+border:1px solid silver;
+
+border-radius:50px;
+
+color:white;
+
+text-decoration:none;
+
+}
+
+#contact{
+
+padding:120px 10%;
+
+text-align:center;
+
+}
+
+#contact h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+color:silver;
+
+}
+
+.contact-btn{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:16px 40px;
+
+background:#25D366;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:50px;
+
+font-weight:700;
+
+}
+
+footer{
+
+padding:40px;
+
+text-align:center;
+
+border-top:1px solid #222;
+
+color:#777;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.product img{
+
+height:350px;
+
+}
 
 }
